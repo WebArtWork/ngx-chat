@@ -5,16 +5,11 @@ waw add ngx-chat
 # Your_page.module.ts
 import chat module to your page
 ```
-import { NgModule } from '@angular/core';     <!--can be for default -->
-import { CoreModule } from '@core';       <!--can be for default-->
-import { Routes, RouterModule } from '@angular/router';       <!--can be for default -->
 import { ChatModule } from 'src/app/modules/chat/chat.module';
 @NgModule({
 	imports: [
-    RouterModule.forChild(routes),      <!--can be for default -->
-		CoreModule,       <!--can be for default -->
-		ChatModule,
-	]
+		ChatModule
+	],
 ```
 # Your_page.component.ts
 import chat service to your page
@@ -25,7 +20,7 @@ export class Your_pageComponent{
 }
 ```
 # Your_page.component.html
-for use this module use tag ```chat ```
+for use this module use tag ```<chat></chat> ```
 ```
 <chat [chat]="'chat'" [isComment]="true"></chat>      <!--for coment -->
 <hr>
