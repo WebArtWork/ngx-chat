@@ -1,8 +1,8 @@
-# your_project/client:
+## In termianl /your_project/client:
 ```
 waw add ngx-chat
 ```
-# Your_page.module.ts
+## Your_page.module.ts
 import chat module to your page
 ```
 import { ChatModule } from 'src/app/modules/chat/chat.module';
@@ -11,7 +11,7 @@ import { ChatModule } from 'src/app/modules/chat/chat.module';
 		ChatModule
 	],
 ```
-# Your_page.component.ts
+## Your_page.component.ts
 import chat service to your page
 ```
 import { ChatService } from 'src/app/modules/chat/chat.service';
@@ -19,7 +19,7 @@ export class Your_pageComponent{
 	constructor(public ch: ChatService ) {}
 }
 ```
-# Your_page.component.html
+## Your_page.component.html
 for use this module use tag ```<chat></chat> ```
 ```
 <chat [chat]="'chat'" [isComment]="true"></chat>      <!--for coment -->
