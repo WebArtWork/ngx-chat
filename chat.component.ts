@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services';
-import { HttpService } from 'wacom';
+import { HttpService, SocketService } from 'wacom';
 import { ChatService } from './chat.service';
 @Component({
 	selector: 'chat',
@@ -20,7 +20,7 @@ export class ChatComponent implements OnInit {
 		*/
 		this.http.post('/api/chat/get', {
 			chat: this.chat
-		}, chats=>{
+		}, chats => {
 			if (this.isComment) {
 				this.chats = chats;
 			} else {
@@ -31,14 +31,26 @@ export class ChatComponent implements OnInit {
 	constructor(
 		public us: UserService,
 		private http: HttpService,
-		public ch:ChatService
-	) {}
+		private socket: SocketService,
+		public ch: ChatService
+	) {
+		socket.on('chat_message', created => {
+			if (created.chat === this.chat) {
+				if (this.isComment) {
+					this.chats.unshift(created);
+				} else {
+					this.chats.push(created);
+				}
+			}
+		});
+	}
 	public text = '';
 	send(){
 		this.http.post('/api/chat/send', {
 			chat: this.chat,
 			text: this.text
 		}, created => {
+			this.socket.emit('chat_message', created);
 			if (this.isComment) {
 				this.chats.unshift(created);
 			} else {

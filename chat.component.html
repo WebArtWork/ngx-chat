@@ -4,7 +4,7 @@
 </form>
 
 <div *ngFor="let chat of chats">
-	<img [src]="us.doc(chat.author).avatarUrl" alt="">
+	<img [src]="us.doc(chat.author).avatarUrl" alt="" style="width: 50px;">
 	<span>{{us.doc(chat.author).email}}</span>
 	<span> | </span>
 	<span>{{chat.text}}</span>
