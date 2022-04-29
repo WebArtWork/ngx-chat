@@ -1,1 +1,15 @@
+<form (ngSubmit)="send()" *ngIf="isComment" [ngModelOptions]="{standalone: true}" >
+	<input type="text" [(ngModel)]="text" name="text">
+	<button [disabled]="!text"  [disabled]="coment" >Send</button>
+</form>
 
+<div *ngFor="let chat of chats">
+	<span>{{us.doc(chat.author).email}}</span>
+	<span> | </span>
+	<span>{{chat.text}}</span>
+</div>
+
+<form (ngSubmit)="send()" *ngIf="!isComment" [ngModelOptions]="{standalone: true}"  >
+	<input type="text" [(ngModel)]="text" name="text">
+	<button [disabled]="!text">Send</button>
+</form>
