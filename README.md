@@ -22,8 +22,8 @@ export class Your_pageComponent{
 ## Your_page.component.html
 for use this module use tag ```<chat></chat> ```
 ```
-<chat [chat]="'chat'" [isComment]="true"></chat>      <!--for coment -->
+<messenger [isComment]="true" [chats]="[{name: 'Honchar Denys', chat: 'qwe', thumb: ''}]"></messenger>  <!--for coment -->
 <hr>
-<chat [chat]="'comment'"></chat>      <!--for chat -->
+<messenger [chats]="[{name: 'Honchar Denys', chat: 'qwe', thumb: ''}]"></messenger>      <!--for chat -->
 ```
 
