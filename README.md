@@ -20,7 +20,7 @@ export class Your_pageComponent{
 }
 ```
 ## Your_page.component.html
-for use this module use tag ```<chat></chat> ```
+for use this module use tag ```<messenger></messenger> ```
 ```
 <messenger [isComment]="true" [chats]="[{name: 'name', chat: 'qwe', thumb: ''}]"></messenger>  <!--for coment -->
 <hr>
