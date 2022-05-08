@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CoreModule } from '@core';
 import { ChatComponent } from './chat/chat.component';
 import { MessengerComponent } from './messenger/messenger.component';
-
+import { WacomModule } from 'wacom';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 @NgModule({
 	imports: [
-		CoreModule
+		CommonModule,
+		FormsModule,
+		WacomModule
 	],
 	declarations: [
 		MessengerComponent,
