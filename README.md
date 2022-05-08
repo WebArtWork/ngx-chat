@@ -2,7 +2,7 @@
 ```
 waw add ngx-chat
 ```
-## Your_page.module.ts
+## 1.1 If you need chat only on 1 page: Your_page.module.ts
 import chat module to your page
 ```
 import { ChatModule } from 'src/app/modules/chat/chat.module';
@@ -11,19 +11,18 @@ import { ChatModule } from 'src/app/modules/chat/chat.module';
 		ChatModule
 	],
 ```
-## Your_page.component.ts
-import chat service to your page
+## 1.2 If you need chat on 2 or more pages : client/src/app/core/core.module.ts:
 ```
-import { ChatService } from 'src/app/modules/chat/chat.service';
-export class Your_pageComponent{
-	constructor(public ch: ChatService ) {}
-}
+exports: [ /* exports */
+		ChatModule
+	],
 ```
 ## Your_page.component.html
 for use this module use tag ```<messenger></messenger> ```
 ```
 <messenger [isComment]="true" [chats]="[{name: 'name', chat: 'qwe', thumb: ''}]"></messenger>  <!--for coment -->
 <hr>
-<messenger [chats]="[{name: 'name', chat: 'qwe', thumb: ''}]"></messenger>      <!--for chat -->
+<messenger [chats]="[{name: 'name', chat: 'qwe', thumb: ''}]"></messenger>
+      <!--for chat -->
 ```
 
