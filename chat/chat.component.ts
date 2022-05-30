@@ -11,12 +11,6 @@ export class ChatComponent implements OnInit {
 	@Input() chat:any = '';
 	public chats = [];
 	ngOnInit() {
-		/*
-		if(Array.isArray(this.chat)){
-			let chat = '';
-			this.chat
-		}
-		*/
 		this.http.post('/api/chat/get', {
 			chat: this.chat
 		}, chats=>{
