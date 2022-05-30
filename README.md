@@ -18,7 +18,7 @@ exports: [ /* exports */
 	],
 ```
 ## Your_page.component.html
-for use this module use tag ```<messenger></messenger> ```
+for use this module use tag ```<messenger></messenger> ``` or ```<comments></comments> ```
 ```
 <comments [chats]="[{name: 'name', chat: 'qwe', thumb: ''}]"></comments>  <!--for coment -->
 <hr>
