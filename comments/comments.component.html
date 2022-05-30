@@ -1,1 +1,5 @@
-
+<div *ngFor='let chat of chats' (click)="selected=chat.chat">
+	{{chat.name}}
+</div>
+<button  *ngIf="selected" (click)='selected = null'>x</button>
+<chat *ngIf="selected" [isComment]="true" [chat]="selected"></chat>
