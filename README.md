@@ -20,7 +20,7 @@ exports: [ /* exports */
 ## Your_page.component.html
 for use this module use tag ```<messenger></messenger> ```
 ```
-<messenger [isComment]="true" [chats]="[{name: 'name', chat: 'qwe', thumb: ''}]"></messenger>  <!--for coment -->
+<comments [chats]="[{name: 'name', chat: 'qwe', thumb: ''}]"></comments>  <!--for coment -->
 <hr>
 <messenger [chats]="[{name: 'name', chat: 'qwe', thumb: ''}]"></messenger>
       <!--for chat -->
