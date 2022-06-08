@@ -4,6 +4,7 @@ import { MessengerComponent } from './messenger/messenger.component';
 import { WacomModule } from 'wacom';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { CommentsComponent } from './comments/comments.component';
 @NgModule({
 	imports: [
 		CommonModule,
@@ -12,11 +13,13 @@ import { FormsModule } from '@angular/forms';
 	],
 	declarations: [
 		MessengerComponent,
-		ChatComponent
+		ChatComponent,
+		CommentsComponent
 	],
 	exports: [
 		MessengerComponent,
-		ChatComponent
+		ChatComponent,
+		CommentsComponent
 	],
 	providers: []
 
