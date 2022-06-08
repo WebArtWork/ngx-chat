@@ -10,5 +10,5 @@
 </form>
 <form (ngSubmit)="send()" *ngIf="!isComment" [ngModelOptions]="{standalone: true}">
 	<input type="text" [(ngModel)]="text" name="text">
-	<button [disabled]="!coment" ><span translate>Menu.Send</span></button>
+	<button [disabled]="!text" ><span translate>Menu.Send</span></button>
 </form>
