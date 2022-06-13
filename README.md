@@ -25,4 +25,4 @@ for use this module use tag ```<messenger></messenger> ``` or ```<comments></com
 <messenger [chats]="[{name: 'name', chat: 'qwe', thumb: ''}]"></messenger>
       <!--for chat -->
 ```
-
+# Find waw-chat and  do it step by step
