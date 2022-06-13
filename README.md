@@ -26,3 +26,6 @@ for use this module use tag ```<messenger></messenger> ``` or ```<comments></com
       <!--for chat -->
 ```
 # Find waw-chat and  do it step by step
+```
+https://github.com/WebArtWork/waw-chat
+```
